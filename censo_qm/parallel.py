@@ -32,6 +32,9 @@ def balance_load(P, O, nconf, do_change):
                     else:
                         break
                 changed = True
+                if O == 2: #If added to avoid the use of 2 cpus
+                    O -= 1
+                    changed = False
             except Exception:
                 pass
         if changed:

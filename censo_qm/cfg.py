@@ -188,6 +188,8 @@ class dfa_settings:
         "wb97x-d3": "wb97x-d3",
         "wb97x-d3bj": "wb97x-d3bj",
         "dsd-blyp": "dsd-blyp-d3",
+        "hf-3c": "hf-3c", # GALC change 22/03/23
+        "hf3c": "hf3c", # GALC change 22/03/23
     }
     functionals = {
         "pbeh-3c": {
@@ -205,6 +207,21 @@ class dfa_settings:
             ],
             "type": "composite_hybrid",
         },
+           "hf-3c": {           # GALC change 22/03/23
+            "tm": "hf3c",
+            "orca": "hf-3c",
+            "disp": "composite",
+            "part": [
+                "func0",
+                "func",
+                "func3",
+                "func_j",
+                "func_s",
+                "func_or",
+                "func_or_scf",
+            ],
+            "type": "composite_hybrid",
+        },                     # GALC change 22/03/23 
         "b97-3c": {
             "tm": "b97-3c",
             "orca": "b97-3c",
